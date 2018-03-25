@@ -1,0 +1,23 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="android.view.LayoutInflater$Factory2"><rhs name\="area.guias.pfc.Ver_Guias"/></lhs><lhs name\="android.view.Window$Callback"><rhs name\="area.guias.pfc.Ver_Guias"/></lhs><lhs name\="android.view.KeyEvent$Callback"><rhs name\="area.guias.pfc.Ver_Guias"/><rhs name\="area.guias.pfc.AlertDialogView"/></lhs><lhs name\="android.view.View$OnCreateContextMenuListener"><rhs name\="area.guias.pfc.Ver_Guias"/></lhs><lhs name\="android.content.ComponentCallbacks2"><rhs name\="area.guias.pfc.Ver_Guias"/></lhs><lhs name\="android.view.LayoutInflater$Factory"><rhs name\="area.guias.pfc.Ver_Guias"/></lhs><lhs name\="android.content.ComponentCallbacks"><rhs name\="area.guias.pfc.Ver_Guias"/></lhs><lhs name\="android.view.ContextThemeWrapper"><rhs name\="area.guias.pfc.Ver_Guias"/></lhs><lhs name\="android.content.ContextWrapper"><rhs name\="area.guias.pfc.Ver_Guias"/></lhs><lhs name\="android.content.Context"><rhs name\="area.guias.pfc.Ver_Guias"/><rhs name\="area.guias.pfc.VistaGuiaActionBarTabs"/></lhs><lhs name\="android.app.Activity"><rhs name\="area.guias.pfc.Ver_Guias"/></lhs><lhs name\="area.guias.pfc.VistaGuiaActionBarTabs$AdaptadorListViewHorizontal"><rhs name\="area.guias.pfc.VistaGuiaActionBarTabs$AdaptadorListViewHorizontal"/></lhs><lhs name\="android.view.ViewGroup$MarginLayoutParams"><rhs name\="android.widget.RelativeLayout$LayoutParams"/></lhs><lhs name\="android.view.ViewGroup$LayoutParams"><rhs name\="android.view.ViewGroup$LayoutParams"/><rhs name\="android.widget.RelativeLayout$LayoutParams"/></lhs><lhs name\="android.widget.RelativeLayout$LayoutParams"><rhs name\="android.widget.RelativeLayout$LayoutParams"/></lhs><lhs name\="android.graphics.Typeface"><rhs name\="android.graphics.Typeface"/></lhs><lhs name\="area.guias.pfc.ToolsFragment$SelectedTools"><rhs name\="area.guias.pfc.ToolsFragment$SelectedTools"/></lhs><lhs name\="android.os.Parcelable"><rhs name\="area.guias.pfc.Activity"/><rhs name\="area.guias.pfc.TechnicalSetting"/></lhs><lhs name\="area.guias.pfc.Activity"><rhs name\="area.guias.pfc.Activity"/></lhs><lhs name\="area.guias.pfc.GuideViewTabs$DownloadImageTab1"><rhs name\="area.guias.pfc.GuideViewTabs$DownloadImageTab1"/></lhs><lhs name\="android.support.v4.widget.DrawerLayout$DrawerListener"><rhs name\="android.support.v4.app.ActionBarDrawerToggle"/></lhs><lhs name\="android.support.v4.app.ActionBarDrawerToggle"><rhs name\="android.support.v4.app.ActionBarDrawerToggle"/></lhs><lhs name\="android.graphics.drawable.Drawable$Callback"><rhs name\="area.guias.pfc.AlertDialogView"/></lhs><lhs name\="android.view.accessibility.AccessibilityEventSource"><rhs name\="area.guias.pfc.AlertDialogView"/></lhs><lhs name\="android.view.View"><rhs name\="area.guias.pfc.AlertDialogView"/></lhs><lhs name\="java.io.File"><rhs name\="java.io.File"/></lhs><lhs name\="area.guias.pfc.PhotoUtils"><rhs name\="area.guias.pfc.PhotoUtils"/></lhs><lhs name\="android.media.ExifInterface"><rhs name\="android.media.ExifInterface"/></lhs><lhs name\="area.guias.pfc.TechnicalSetting"><rhs name\="area.guias.pfc.TechnicalSetting"/></lhs></history>
+content_assist_number_of_computers=12
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+fontPropagated=true
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.exception.name=e
+org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.jdt.ui.gettersetter.use.is=true
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.overrideannotation=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Consolas|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
+proposalOrderMigrated=true
+sourceHoverBackgroundColor=255,255,225
+spelling_locale_initialized=true
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true
