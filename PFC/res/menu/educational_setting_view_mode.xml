@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="area.guias.pfc.EducationalSettingView" >
+    
+    <item 
+        android:id="@+id/copy"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_copy"
+        android:title="@string/copy_educational_setting_to_guide">
+    </item>   
+    
+    <item 
+        android:id="@+id/edit_mode"
+        app:showAsAction="never"
+        android:title="@string/edit_mode">
+    </item>
+    
+    <item 
+        android:id="@+id/revert"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/atras">
+    </item>   
+    
+</menu>

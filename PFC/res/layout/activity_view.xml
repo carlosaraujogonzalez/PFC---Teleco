@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_guias"
+  >
+       
+	<ScrollView
+    	android:id="@+id/scrollView_activity"
+    	android:background="@drawable/white_box"
+    	android:layout_margin="10dp"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent">    
+    
+		<RelativeLayout
+    		android:id="@+id/main_layout"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_marginBottom="50dp"
+    		android:layout_marginTop="5dp"
+    		android:layout_marginLeft="5dp"
+    		android:layout_marginRight="10dp" >
+
+    
+    		<TextView
+        		android:id="@+id/titulo"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_margin="10dp"
+        		android:text="@string/titulo"
+        		android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    		<EditText
+        		android:id="@+id/edit_title"
+        		android:inputType="textMultiLine"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_margin="10dp"
+        		android:text="@string/titulo"
+        		android:textAppearance="?android:attr/textAppearanceLarge"
+        		android:visibility="invisible" />
+    
+    		<ImageView
+        		android:id="@+id/imagen"
+        		android:contentDescription="@string/imagen"
+        		android:onClick="getPhotoDialog"
+        		android:layout_width="100dp"
+        		android:layout_height="100dp"
+        		android:layout_margin="10dp"
+        		android:layout_below="@+id/titulo"
+        		android:src="@drawable/imagen" />
+
+    		<TextView
+        		android:id="@+id/descripcion"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/imagen"
+        		android:layout_margin="10dp"
+        		android:text="@string/descripcion"
+        		android:textAppearance="?android:attr/textAppearanceSmall"/>
+    
+    		<EditText
+        		android:id="@+id/editDescription"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/imagen"
+        		android:layout_margin="10dp"
+        		android:inputType="textMultiLine"
+        		android:text="@string/descripcion"
+        		android:textAppearance="?android:attr/textAppearanceSmall" 
+        		android:visibility="invisible"/>
+    
+    		<ImageView
+       		 	android:id="@+id/padlock"
+        		android:contentDescription="@string/private_public"
+        		android:layout_width="20dp"
+        		android:layout_height="20dp"
+        		android:layout_marginTop="70dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_below="@+id/descripcion"
+        		android:layout_alignParentLeft="true"
+        		android:src="@drawable/padlock" />
+    
+    		<RadioButton
+        		android:id="@+id/radiobutton_public"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_marginTop="63dp"
+        		android:layout_below="@+id/descripcion"
+				android:layout_toRightOf="@+id/padlock"
+        		android:text = "@string/publik"
+        		android:visibility="gone"/>
+    
+    		<RadioButton
+        		android:id="@+id/radiobutton_private"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_toRightOf="@+id/radiobutton_public"
+        		android:layout_alignBottom="@+id/radiobutton_public"
+        		android:text="@string/privat"
+        		android:visibility="gone"/>
+    
+ 		<RelativeLayout
+    		android:id="@+id/aux_layout"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_below="@+id/padlock"
+    		>
+     		    
+    	</RelativeLayout>
+  	
+   		</RelativeLayout>
+   	</ScrollView>
+</RelativeLayout>

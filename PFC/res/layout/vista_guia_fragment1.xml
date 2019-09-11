@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="area.guias.pfc.GuideViewTabs$HeaderFragment"
+    android:background="@null" >
+    
+    <ScrollView
+        android:id="@+id/scrollView_tab1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/white_box"    
+        android:layout_marginBottom="60dp">
+   
+  	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+  	    <TextView
+   	 	    android:id="@+id/titulo_tab1"
+   	 	    android:layout_width="wrap_content"
+   	 	    android:layout_height="wrap_content"
+   	 	    android:layout_margin="10dp"
+   	 	    android:text="@string/titulo"
+   	 	    android:textAppearance="?android:attr/textAppearanceMedium"
+   	 	    android:textStyle="bold"/>
+  	    
+   	 	<ImageView
+   	 	    android:id="@+id/imagen_tab1"
+   	 	    android:layout_width="wrap_content"
+   	 	    android:layout_height="wrap_content"
+   	 	    android:layout_below="@+id/titulo_tab1"
+   	 	    android:layout_margin="10dp"
+   	 	    android:onClick="getPhotoDialog"
+   	 	    android:contentDescription="@string/imagen"
+   	 	    android:src="@drawable/imagen" />
+   	 	
+        <TextView
+            android:id="@+id/descripcion_tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below = "@+id/imagen_tab1"
+            android:text="@string/descripcion"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:paddingBottom="10dp"/>
+
+    	<EditText
+   	 	    android:id="@+id/editar_titulo_tab1"
+   	 	    android:layout_width="wrap_content"
+   	 	    android:layout_height="wrap_content"
+   	 	    android:layout_margin="10dp"
+   	 	    android:inputType="textMultiLine"
+   	 	    android:textAppearance="?android:attr/textAppearanceMedium"
+   	 	    android:visibility="invisible"
+   	 	    android:textStyle="bold" />
+    	
+   	 	<EditText
+        	android:id="@+id/editar_descripcion_tab1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/imagen_tab1"
+        	android:layout_margin="10dp"
+        	android:visibility="invisible"
+        	android:inputType="textMultiLine"
+        	android:textAppearance="?android:attr/textAppearanceSmall" 
+        	android:paddingBottom="10dp"/>
+    
+   	 	<View 
+    		android:id="@+id/horizontalLine"
+       		android:background="@null"
+  			android:layout_height="1dp"
+  			android:layout_width="match_parent"
+  			android:layout_below="@+id/descripcion_tab1"  
+        	android:layout_marginTop="1dp"
+        	android:layout_marginBottom="1dp">
+        </View>
+        
+    	</RelativeLayout>
+     </ScrollView>
+
+</RelativeLayout>
+

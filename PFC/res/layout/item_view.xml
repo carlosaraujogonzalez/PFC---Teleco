@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:background="@drawable/white_box"
+    	android:layout_marginBottom="5dp"
+    	android:layout_marginTop="2dp"
+    	android:layout_marginLeft="2dp"
+    	android:layout_marginRight="2dp"
+    	android:descendantFocusability="blocksDescendants" >
+    	
+		<RelativeLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_marginBottom="5dp"
+    		android:background="@null">
+    		
+			<CheckBox
+        		android:id="@+id/checkbox"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_margin="3dp"
+        		android:text="@string/eliminar"
+        		android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    		<View 
+    		    android:id="@+id/horizontalLine"
+       			android:background="@color/black_eduarea"
+  				android:layout_height="1dp"
+  				android:layout_width="match_parent"
+  				android:layout_below="@+id/checkbox"  
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp">
+        	</View>
+        		
+    		<TextView
+        		android:id="@+id/title"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:maxLines="2"
+        		android:layout_marginTop="6dp"
+        		android:layout_marginLeft="3dp"
+        		android:layout_marginRight="3dp"
+        		android:layout_marginBottom="3dp"
+        		android:layout_toRightOf="@+id/image"
+        		android:layout_below="@+id/checkbox"
+        		android:hint="@string/titulo"
+        		android:text="@string/titulo"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:textStyle="bold" />
+    
+    		<TextView
+        		android:id="@+id/description"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:maxLines="4"
+        		android:layout_toRightOf="@+id/image"
+        		android:layout_below="@+id/title"
+        		android:layout_margin="3dp"
+        		android:hint="@string/descripcion"
+        		android:textAppearance="?android:attr/textAppearanceSmall" />
+    		
+    		<ImageView
+        		android:id="@+id/image"
+        		android:contentDescription="@+id/image"
+        		android:layout_width="100dp"
+        		android:layout_height="100dp"
+        		android:scaleType="centerInside"
+        		android:layout_margin="5dp"
+        		android:layout_below="@+id/horizontalLine"
+        		android:src="@drawable/imagen" />
+    
+    		<TextView
+        		android:id="@+id/keywords"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/image"
+        		android:layout_margin="3dp"
+        		android:hint="@string/keywords"
+        		android:textAppearance="?android:attr/textAppearanceSmall" />
+    		
+    		<ImageView
+        		android:id="@+id/padlock"
+        		android:contentDescription="@+id/padlock"
+        		android:layout_width="20dp"
+        		android:layout_height="20dp"
+        		android:scaleType="centerInside"
+        		android:layout_margin="5dp"
+        		android:layout_below="@+id/keywords"
+        		android:src="@drawable/padlock" />
+    		
+    		<View 
+       			android:background="@color/black_eduarea"
+  				android:id="@+id/horizontalLine2"
+  				android:layout_height="1dp"
+  				android:layout_width="match_parent"
+  				android:layout_below="@+id/padlock"  
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp">
+  			</View>
+   			
+    		<LinearLayout
+    		    android:id="@+id/linear_layout"
+        		android:orientation="horizontal"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/horizontalLine2"
+        		android:layout_marginTop="2dp">
+
+    		    <ImageView
+        			android:id="@+id/user"
+        			android:contentDescription="@+id/user"
+        			android:layout_width="30dp"
+        			android:layout_height="30dp"
+        			android:scaleType="fitXY"
+        			android:layout_margin="5dp"
+        			android:src="@drawable/user" />
+        		
+   	    		<TextView
+        			android:id="@+id/user_name"
+        			android:layout_width="match_parent"
+        			android:layout_height="wrap_content"
+        			android:layout_margin="3dp"
+        			android:singleLine="true"
+        			android:hint="@string/user_name"
+        			android:textAppearance="?android:attr/textAppearanceSmall" />
+   				  				
+        	</LinearLayout>
+        	
+   			<LinearLayout
+        		android:orientation="horizontal"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/linear_layout"
+        		android:layout_marginTop="2dp">
+
+        		<area.guias.pfc.DontPressWithParentImageButton
+        			android:id="@+id/comment"
+        			android:background="@null"
+        			android:contentDescription="@string/comment"
+        			android:layout_width="20dp"
+        			android:layout_height="40dp"  
+        			android:layout_weight="1"  
+        			android:drawSelectorOnTop="true"
+       				android:src="@drawable/comment_button_selector"/>
+   	    
+   				<area.guias.pfc.DontPressWithParentImageButton
+        			android:id="@+id/share"
+        			android:contentDescription="@string/share"
+        			android:background="@null"
+        			android:layout_width="20dp"
+        			android:layout_height="40dp"  
+        			android:layout_weight="1" 
+        			android:drawSelectorOnTop="true"
+        			android:src="@drawable/share_button_selector"/>
+   				
+        	</LinearLayout>
+		</RelativeLayout>
+	</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/navigation_drawer_header">
+    
+    <ImageView
+        android:id="@+id/backgrd"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:src="@drawable/icono"
+        android:scaleType="fitXY"/>
+        
+
+</FrameLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd" > 
+	
+	<LinearLayout 
+        android:id="@+id/linearLayout_search_applications"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:background="#DDDDDD" 
+    	android:visibility="gone">
+        
+        <EditText  
+        	android:id="@+id/editText_applications_view"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:hint="@string/search_applications"
+        	android:layout_weight="0.7"
+        	>
+        </EditText>
+        
+        <ImageView
+            android:id="@+id/imageView_search_applications_view"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="0.2"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="@string/imagen">
+        </ImageView>
+        
+        <ImageView
+            android:id="@+id/imageView_close_search_applications_view"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="0.1"
+            android:src="@android:drawable/ic_delete"
+            android:contentDescription="@string/imagen">
+        </ImageView>
+      
+	</LinearLayout>
+    
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout_search_applications"
+        android:background="#dddddd" >
+	    
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:drawSelectorOnTop="true" >
+        </ListView>
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/no_hay_aplicaciones" />
+    </FrameLayout>
+
+
+</RelativeLayout>

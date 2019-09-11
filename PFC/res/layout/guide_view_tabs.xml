@@ -1,0 +1,92 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/guide_view_tabs_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_guias"
+    android:orientation="vertical"
+    tools:context="area.guias.pfc.GuideViewTabs">
+	    
+
+    <android.support.v4.view.ViewPager 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="area.guias.pfc.GuideViewTabs">	 	 
+    </android.support.v4.view.ViewPager> 
+
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:background="@drawable/blue_button_list_selector"
+            android:contentDescription="@+id/comentar"
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/comentar"
+            android:id="@+id/comentar"
+            android:textSize="14sp"
+            android:onClick = "comentar"
+            android:layout_weight="1"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:background="@drawable/blue_button_list_selector"
+            android:contentDescription="@+id/copiar"
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/copiar"
+            android:id="@+id/copiar"
+            android:onClick = "copiar"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:background="@drawable/blue_button_list_selector"
+            android:contentDescription="@+id/eliminar"
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eliminar"
+            android:id="@+id/eliminar"
+            android:textSize="14sp"
+            android:onClick="eliminar"
+            android:layout_weight="1"
+            android:textColor="#ffffff" />
+        
+       
+    </LinearLayout>
+    
+   	<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_alignParentBottom="true"
+        >        
+   	    
+   	    <Button
+        	android:id="@+id/show_hide_keyboard"
+        	android:background="@drawable/blue_button_list_selector"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content"  
+        	android:layout_weight="1" 
+        	android:layout_margin="3dp"   
+        	android:visibility="invisible"
+        	android:textColor="#FFFFFF"
+        	android:onClick="showKeyboard"
+        	android:text="@string/show_hide_keyboard" />
+      
+    </LinearLayout>
+	</RelativeLayout>

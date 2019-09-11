@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/educational_settings_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_guias" > 
+    
+    <LinearLayout 
+        android:id="@+id/linearLayout_search_educational_settings"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:background="@drawable/comment_box"
+    	android:orientation="horizontal"
+    	android:visibility="gone">
+        
+        <EditText  
+        	android:id="@+id/editText_educational_settings_view"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:hint="@string/search_educational_settings"
+        	android:layout_weight="0.7"
+        	android:textColorHint="@color/white_eduarea"
+        	android:textColor="@color/white_eduarea"
+        	android:textCursorDrawable="@drawable/white_cursor"
+        	android:textColorHighlight="@color/blue_eduarea">
+        </EditText>
+        
+        <ImageView
+            android:id="@+id/imageView_search_educational_settings_view"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="0.2"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="@string/imagen">
+        </ImageView>
+        
+        <ImageView
+            android:id="@+id/imageView_close_search_educational_settings_view"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="0.1"
+            android:src="@android:drawable/ic_delete"
+            android:contentDescription="@string/imagen">
+        </ImageView>
+      
+	</LinearLayout>
+	
+    <FrameLayout
+        android:id="@+id/frameLayout_educationalSettings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/linearLayout_search_educational_settings"
+        android:background="@null">
+	    
+        <GridView
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:id="@+id/gridView"
+        	android:numColumns="1"
+        	android:horizontalSpacing="8dp"
+        	android:verticalSpacing="8dp"
+        	android:stretchMode="columnWidth"
+        	android:drawSelectorOnTop="true"
+        	android:listSelector="@drawable/guide_list_selector" />
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/there_are_no_educationalSettings" 
+            android:textSize="25sp"
+            android:layout_gravity="center"/>
+        
+    </FrameLayout>
+
+
+</RelativeLayout>

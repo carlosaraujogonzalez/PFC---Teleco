@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <color 
+        android:id="@+id/color1" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        name="blue_eduarea">#00AAFF
+    </color>
+ 
+    <color 
+        android:id="@+id/color2" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        name="black_eduarea">#000000
+    </color>
+    
+    <color 
+        android:id="@+id/color3" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        name="white_eduarea">#FFFFFF
+    </color>
+    
+    <color 
+        android:id="@+id/color4" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        name="darkblue_eduarea">#0000FF
+    </color>
+    
+    <color 
+        android:id="@+id/color5" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        name="grey_eduarea">#DDDDDD
+    </color>
+    
+    <color 
+        android:id="@+id/color6" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        name="orange_eduarea">#FF7514
+    </color>
+    
+    <color 
+        android:id="@+id/color7" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        name="light_orange_eduarea">#FFFFCC
+    </color>
+    
+    <color name="black_translucent">#AA000000</color>
+    <color name="item_box">#CCFFFFFF</color>
+    <color name="translucent">#ccFFFFFF</color>
+    <color name="black">#182B3C</color>
+    <color name="action_bar">#33b5e5</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue_transparent">#8F00AAFF</color>
+    <color name="dark_blue_transparent">#8F0000FF</color>
+    <color name="transparent_orange">#8FFF8000</color>
+    <color name="orange_clair">#FFB266</color>
+    <color name="orange_medium">#FF9933</color>
+    <color name="orange_dark">#FF8000</color>
+    <color name="blue_dark">#0000FF</color>
+    <color name="blue_clair">#66B2FF</color>
+    <color name="brown_dark">#990000</color>
+    
+    
+</resources>

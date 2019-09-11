@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+  
+    <FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/commentInsert_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/comment_box">
+	    
+        <RelativeLayout
+            android:id="@+id/commentInsert_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="horizontal"
+            android:background="@null">
+            
+            <EditText
+            	android:id="@+id/commentInsert_EditText"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="5dp"
+            	android:layout_marginRight="45dp"
+            	android:textColor="@color/white_eduarea"
+            	android:textColorHint="@color/white_eduarea"
+            	android:textCursorDrawable="@drawable/white_cursor"
+            	android:hint="@string/comment"/>
+
+            <ImageButton
+                android:id="@+id/commentInsert_imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@+id/commentInsert_EditText"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@null"
+                android:onClick="insert_comment"
+                android:src="@drawable/insert_comment_button_selector" />
+            
+        </RelativeLayout>
+       
+    </FrameLayout>

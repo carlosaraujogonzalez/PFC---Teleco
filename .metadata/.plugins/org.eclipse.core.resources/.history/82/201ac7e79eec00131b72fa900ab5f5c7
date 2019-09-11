@@ -1,0 +1,391 @@
+package area.guias.pfc;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPut;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.protocol.HttpContext;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.app.ListFragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.ListView;
+
+import com.google.gson.stream.JsonReader;
+
+public class AppListFragment2 extends ListFragment{
+	public static AdaptadorListaAplicaciones listTotalAppAdapter;
+	public static List<Aplicacion> AppList;
+	public static IP ip = new IP();
+	public static SharedPreferences preferences;	
+	public AlmacenAplicaciones almacenNuevasApp = new AplicacionesArray();
+	public static int ts_id;
+	public static String modo_edicion;
+	public static ListView listViewTotalApp;
+	
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////																	   ////////////////////
+////////////////////////		INTERFAZ PARA COMUNICARSE CON LA ACTIVITY VerDispositivos.java ////////////////////
+////////////////////////																	   ////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	ComunicateToVerAplicaciones mCallback;
+	
+	// La actividad contenedora debe implementar esta interfaz
+    public interface ComunicateToVerAplicaciones {
+        public void onAddedApp(int appID);
+    }
+	
+    
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        
+        // Nos aseguramos de que la actividad contenedora haya implementado la
+        // interfaz de retrollamada. Si no, lanzamos una excepción
+        try {
+            mCallback = (ComunicateToVerAplicaciones) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " debe implementar la interfaz en la activity");
+        }
+    }
+    
+    
+    
+    
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+			super.onCreateView(inflater, container, savedInstanceState);
+			return inflater.inflate(R.layout.ver_aplicaciones_sistema, container);			
+	}
+	
+	
+	
+	
+	
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		listTotalAppAdapter = new AdaptadorListaAplicaciones(getActivity(), almacenNuevasApp.listaAplicaciones());		
+		setListAdapter(listTotalAppAdapter);  		
+		ts_id = getActivity().getIntent().getExtras().getInt("ts_id");
+		modo_edicion = "true";
+		listViewTotalApp = (ListView) getActivity().findViewById(android.R.id.list);
+		getActivity();
+		preferences = getActivity().getSharedPreferences("datos", Context.MODE_PRIVATE);
+		new GetApplications(ts_id, preferences.getString("Cookie", "0")).start();
+	}
+	
+	
+	
+	 
+	 
+	@Override 
+    public void onListItemClick(ListView listView, View view, int position, long id) {
+    	super.onListItemClick(listView, view, position, id);
+    	Intent intent = new Intent(getActivity(), VistaAplicacion.class);
+    	intent.putExtra("id", AppList.get(position).id);
+    	intent.putExtra("titulo", AppList.get(position).name);
+    	intent.putExtra("URLimage", AppList.get(position).image);
+    	intent.putExtra("description", AppList.get(position).description);
+	    startActivity(intent);
+    }
+	
+	
+
+	
+	
+	public class GetApplications extends Thread {
+		String cookie;
+		
+		public GetApplications(int ct_id, String cookie){
+			this.cookie = cookie;
+		}
+		
+		@Override 
+	    public void run() {
+	    	HttpClient cliente = new DefaultHttpClient();
+	    	HttpGet solicitud;
+	    	HttpResponse respuesta;
+	    	String BaseUrlPage;
+	    	BaseUrlPage = ip.ip+"/gl/applications.json";
+	    	System.out.println(BaseUrlPage);
+	    	solicitud = new HttpGet(BaseUrlPage);	
+	    	solicitud.setHeader("Cookie", "_AREA_v0.1_session="+ this.cookie);
+	        try {
+				respuesta = cliente.execute(solicitud);
+				HttpEntity entity = respuesta.getEntity();
+				List<Aplicacion> IdList = readJsonAppStream(entity);
+				BaseUrlPage = ip.ip+"/gl/applications/getWholeView.json?id=";
+				System.out.println(BaseUrlPage);
+	        	for (int i=0; i<IdList.size(); i++){
+	        		BaseUrlPage = BaseUrlPage + IdList.get(i).id;
+	        		if (i<IdList.size()-1) BaseUrlPage = BaseUrlPage+",";        		
+	        	}		
+	        	System.out.println("BaseUrlPage");
+	        	System.out.println(BaseUrlPage);
+	        	solicitud = new HttpGet(BaseUrlPage);
+	        	solicitud.setHeader("Cookie", "_AREA_v0.1_session="+this.cookie);
+	            respuesta = cliente.execute(solicitud);
+	        	entity = respuesta.getEntity();
+	        	AppList = readJsonAppStream(entity);
+	        	for (int i=0; i<AppList.size(); i++){
+	        		System.out.println("Guardando aplicacion con id = " + AppList.get(i).id);
+	        		almacenNuevasApp.guardarAplicacion(AppList.get(i));        		
+	        	}	
+	        	// Cada dispositivo tendrá una imagen
+				if (AppList.size()>0) comenzarHiloImagenesAplicacion(AppList);
+			} catch (ClientProtocolException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}				
+	     }        
+
+		
+	}
+	
+	
+
+	
+	
+	protected void comenzarHiloImagenesAplicacion(final List<Aplicacion> lista){
+		getActivity().runOnUiThread(new Runnable() {
+	        public void run() {
+	        	new HiloImagenesAplicacion(lista).start(); 
+	        }
+	    });
+	}
+	
+	
+	
+	
+	
+	class HiloImagenesAplicacion extends Thread {
+    	List<Aplicacion> AppList;
+        String galleryType;
+        
+        public HiloImagenesAplicacion(List<Aplicacion> lista) {
+        	this.AppList = lista;
+        }
+        
+        @Override 
+        public void run() {
+        	HttpClient cliente = new DefaultHttpClient();
+        	HttpGet solicitud;
+        	HttpResponse respuesta;
+        	String BaseUrlPage;
+        	for(int i=0;i<this.AppList.size();i++){
+        		if (this.AppList.get(i).UrlImage.equals("none")){
+        			actualizarGaleriaAplicaciones(this.AppList);
+        		}
+        		else{
+        			BaseUrlPage = ip.ip+this.AppList.get(i).UrlImage;
+        			System.out.println(BaseUrlPage);
+        			solicitud = new HttpGet(BaseUrlPage);	
+        			try {
+        				HttpContext localContext = null;
+        				respuesta = cliente.execute(solicitud, localContext);
+        				HttpEntity entity = respuesta.getEntity();
+        				Bitmap loadedImage = BitmapFactory.decodeStream(entity.getContent());
+        				almacenNuevasApp.setImage(this.AppList.get(i).id, loadedImage);
+        				actualizarGaleriaAplicaciones(this.AppList);					
+        			} catch (ClientProtocolException e) {
+        				e.printStackTrace();
+        			} catch (IOException e) {
+        				e.printStackTrace();
+        			}	
+        		}
+        	}        		
+        }        
+    }
+	
+	
+	
+	
+	
+	public void actualizarGaleriaAplicaciones(final List<Aplicacion> AppList){
+    	final AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
+   
+		getActivity().runOnUiThread(new Runnable() {
+	        public void run() {
+        
+	        		getListView().setOnItemLongClickListener(new OnItemLongClickListener() {
+						@Override
+						public boolean onItemLongClick(AdapterView<?> arg0,	View arg1, final int arg2, long arg3) {		    		   		
+				    		dialog.setTitle("Advertencia");
+				    		dialog.setMessage("¿Quieres añadir esta aplicación?");
+				    		dialog.setCancelable(false);
+				    		dialog.setPositiveButton("Si", new DialogInterface.OnClickListener() {   		 
+				    		   @Override
+				    		   public void onClick(DialogInterface dialog, int which) {
+				    			  addAplicacion(AppList, AppList.get(arg2).id, arg2);
+				    			  mCallback.onAddedApp(AppList.get(arg2).id);
+				    		      dialog.cancel();
+				    		   }
+				    		});  	
+				    		dialog.setNegativeButton("No", new DialogInterface.OnClickListener() {   		 
+					    		   @Override
+					    		   public void onClick(DialogInterface dialog, int which) {
+					    		      dialog.cancel();
+					    		   }
+					    	});  	
+				    		dialog.show();
+							return false;
+						}
+					});
+	        	
+	        	
+	        	listTotalAppAdapter.notifyDataSetChanged();
+	        }
+	    });
+	}
+	
+	
+	
+	
+	
+	public void addAplicacion(List<Aplicacion> AppList, int idApp, int position){
+    	new EnviarContextoTecnico("", "", null, ts_id, -1, -1, -1, idApp).start();
+    }
+	
+	
+	
+	
+	
+	public List<Aplicacion> readJsonAppStream(HttpEntity in) throws IOException {
+		JsonReader reader = new JsonReader(new InputStreamReader(in.getContent(), "UTF-8"));
+		try {
+			return readAppArray(reader);
+		} 
+		finally {
+			reader.close();
+		}
+	}
+	
+	
+	
+	public List<Aplicacion> readAppArray(JsonReader reader) throws IOException {
+		List<Aplicacion> dispositivos = new ArrayList<Aplicacion>();
+		reader.beginArray();
+		while (reader.hasNext()) {
+			dispositivos.add(readApp(reader));
+		}
+		reader.endArray();
+		return dispositivos;
+	}
+
+	
+	
+	
+	
+	public Aplicacion readApp(JsonReader reader) throws IOException {
+		Aplicacion aplicacion = new Aplicacion();
+		reader.beginObject();
+		while (reader.hasNext()) {
+			String name = reader.nextName();
+			if (name.equals("id")) {
+				aplicacion.id = reader.nextInt();
+			} 
+			else if (name.equals("name")){
+				aplicacion.name = reader.nextString();
+			} else if (name.equals("element_image_file_name")){
+				aplicacion.element_image_file_name = reader.nextString();
+			} else if (name.equals("description")){
+				aplicacion.description = reader.nextString();
+			} else if (name.equals("url")){
+				aplicacion.url = reader.nextString();
+			} else if (name.equals("image")){
+				aplicacion.UrlImage = reader.nextString();
+			} else {
+				reader.skipValue();
+			}
+		}
+		reader.endObject();
+		return aplicacion;
+	}
+	
+	
+	
+	
+	class EnviarContextoTecnico extends Thread {
+    	String titulo, descripcion;
+    	int CTid;
+        Uri imageUri;
+        int deleteDispId, addDispId;
+        int deleteAppId, addAppId;
+        
+        public EnviarContextoTecnico(String titulo, String descripcion, Uri imageUri, int CTid, int deleteDispId, int deleteAppId, int addDispId, int addAppId) {
+        	this.descripcion = descripcion;
+        	this.titulo = titulo;
+        	this.CTid = CTid;
+        	this.imageUri = imageUri;
+        	this.deleteDispId = deleteDispId;
+        	this.deleteAppId = deleteAppId;
+        	this.addDispId = addDispId;
+        	this.addAppId = addAppId;
+        }
+
+        @Override 
+        public void run() {
+        	HttpClient cliente = new DefaultHttpClient();
+        	HttpPut solicitud;
+        	String BaseUrlPage;
+        	BaseUrlPage = ip.ip+"/gl/technicalSettings/"+this.CTid+".json";
+        	
+            MultipartEntity mpEntity = new MultipartEntity();
+			try {
+				
+				if (this.addDispId > 0){
+					BaseUrlPage = ip.ip+"/gl/technicalSettings/addInvolvements.json";
+					BaseUrlPage = BaseUrlPage + "?id=" + this.CTid;
+					BaseUrlPage = BaseUrlPage + "&applications="+this.addDispId;
+					solicitud = new HttpPut(BaseUrlPage);
+					solicitud.setHeader("Cookie", "_AREA_v0.1_session="+preferences.getString("Cookie", "0"));
+					cliente.execute(solicitud);
+				}
+				else{
+					solicitud = new HttpPut(BaseUrlPage);
+					solicitud.setHeader("Cookie", "_AREA_v0.1_session="+preferences.getString("Cookie", "0"));
+					solicitud.setEntity(mpEntity);
+					cliente.execute(solicitud);	
+				}
+								
+				System.out.println(BaseUrlPage);
+			} catch (UnsupportedEncodingException e1) {
+				e1.printStackTrace();
+			} catch (ClientProtocolException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}				
+        }        
+    }
+}
+
+

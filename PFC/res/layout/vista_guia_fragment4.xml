@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="area.guias.pfc.VistaGuiaActionBarTabs$PlaceholderFragment"
+    android:background="@null">
+    
+    <ScrollView
+        android:id="@+id/scrollView_tab4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"             
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/white_box">
+   
+  	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+  	    <RelativeLayout
+  	    android:id="@+id/header_layout_tab4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+  	    <TextView
+   	 	    android:id="@+id/titulo_tab4"
+   	 	    android:layout_width="wrap_content"
+   	 	    android:layout_height="wrap_content"
+   	 	    android:layout_margin="10dp"
+   	 	    android:text="@string/titulo"
+   	 	    android:textAppearance="?android:attr/textAppearanceMedium"
+   	 	    android:textStyle="bold"/>
+  	    
+   	 	<ImageView
+   	 	    android:id="@+id/imagen_tab4"
+   	 	    android:layout_width="wrap_content"
+   	 	    android:layout_height="wrap_content"
+   	 	    android:layout_below="@+id/titulo_tab4"
+   	 	    android:layout_margin="10dp"
+   	 	    android:onClick="getPhotoDialog"
+   	 	    android:contentDescription="@string/imagen"
+   	 	    android:src="@drawable/imagen" />
+   	 	
+        <TextView
+            android:id="@+id/descripcion_tab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below = "@+id/imagen_tab4"
+            android:text="@string/descripcion"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    	<EditText
+   	 	    android:id="@+id/editar_titulo_tab4"
+   	 	    android:layout_width="wrap_content"
+   	 	    android:layout_height="wrap_content"
+   	 	    android:layout_margin="10dp"
+   	 	    android:inputType="textMultiLine"
+   	 	    android:textAppearance="?android:attr/textAppearanceMedium"
+   	 	    android:textStyle="bold"
+   	 	    android:visibility="invisible" />
+    	
+   	 	<EditText
+        	android:id="@+id/editar_descripcion_tab4"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_margin="10dp"
+        	android:layout_below="@+id/imagen_tab4"
+        	android:text="@string/descripcion"
+        	android:hint="@string/description"
+        	android:visibility="invisible"
+        	android:inputType="textMultiLine"
+        	android:textAppearance="?android:attr/textAppearanceSmall" />
+   		
+   	 	</RelativeLayout>
+   	 	
+   		<Button
+   		    android:id="@+id/see_activities_button"
+   		    android:layout_width="match_parent"
+   		    android:layout_height="match_parent"
+   		    android:layout_margin="10dp"
+   		    android:layout_below="@+id/header_layout_tab4"
+   		    android:background="@drawable/orange_button_list_selector"
+   		    android:text="@string/see_activities"
+   		    android:onClick="seeActivities"
+   		    android:textAppearance="?android:attr/textAppearanceMedium"
+   		    android:paddingBottom="10dp"/>   
+   	 	
+   		<View 
+    		android:id="@+id/horizontalLine"
+       		android:background="@null"
+  			android:layout_height="1dp"
+  			android:layout_width="match_parent"
+  			android:layout_below="@+id/see_activities_button"  
+        	android:layout_marginTop="1dp"
+        	android:layout_marginBottom="1dp"
+        	>
+        </View>
+        
+    	</RelativeLayout>
+     </ScrollView>
+
+    
+</RelativeLayout>
+

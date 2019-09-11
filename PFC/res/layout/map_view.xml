@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+         
+    	<LinearLayout 
+        	android:id="@+id/linearLayout_search_address"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:background="@drawable/comment_box"
+    		android:orientation="horizontal"
+    		android:visibility="gone">
+        
+        	<EditText  
+        		android:id="@+id/editText_map_view"
+        		android:background="@color/white_eduarea"
+        		android:layout_margin="10dp"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:hint="@string/address"
+        		android:layout_weight="0.7"
+        		android:textColorHint="@color/black"
+        		android:textColor="@color/black"
+        		android:textCursorDrawable="@drawable/black_cursor">
+        	</EditText>
+        
+        	<ImageView
+            	android:id="@+id/imageView_search_map_view"
+            	android:layout_width="50dp"
+            	android:layout_height="35dp"
+            	android:layout_marginRight="3dp"
+            	android:layout_weight="0.2"
+            	android:onClick="search_address"
+            	android:src="@android:drawable/ic_menu_search"
+            	android:contentDescription="@string/imagen">
+        	</ImageView>
+      
+		</LinearLayout>
+	
+    	<fragment class="com.google.android.gms.maps.MapFragment"
+        	android:id="@+id/map"
+        	android:layout_below="@+id/linearLayout_search_address"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"/>
+    	
+
+</RelativeLayout>

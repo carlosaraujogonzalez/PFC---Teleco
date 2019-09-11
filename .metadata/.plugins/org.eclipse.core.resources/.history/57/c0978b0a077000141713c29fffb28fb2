@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   	xmlns:tools="http://schemas.android.com/tools" 
+   	android:id="@+id/comments_relative_layout"
+   	android:background="@drawable/fondo_guias"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    tools:context=".CommentsView">
+	
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_dark"        android:textStyle="bold"	
+        android:hint="@string/title"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"  
+        android:background="@drawable/white_box"  
+        android:layout_margin="10dp"    
+        android:orientation="vertical">
+        
+        <fragment
+         	android:id="@+id/comments_view_fragment" 
+         	android:layout_width="match_parent" 
+          	android:layout_height="match_parent" 
+          	android:layout_margin="10dp"
+          	android:layout_weight="3"
+          	class="area.guias.pfc.CommentsViewFragment"/>
+    
+    	<fragment
+          	android:id="@+id/comment_insert_fragment" 
+          	android:layout_width="match_parent" 
+         	android:layout_height="wrap_content" 
+         	android:layout_weight="0.1"
+         	android:layout_marginTop="5dp"
+          	class="area.guias.pfc.CommentInsertFragment"/>
+        
+    </LinearLayout>
+     
+    
+</RelativeLayout>

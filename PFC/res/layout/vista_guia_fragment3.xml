@@ -1,0 +1,518 @@
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    tools:context="area.guias.pfc.VistaGuiaActionBarTabs$PlaceholderFragment" >
+    
+    <ScrollView
+        android:id="@+id/scrollView_tab3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/white_box" >
+        
+   		<RelativeLayout
+        	android:layout_width="match_parent"
+       	 	android:layout_height="wrap_content"
+        	android:orientation="vertical" >
+    
+   		   	<RelativeLayout
+   		   	    android:id="@+id/header_layout_tab3"
+        		android:layout_width="match_parent"
+       	 		android:layout_height="wrap_content"
+        		android:orientation="vertical" >
+        	
+    			<TextView
+        			android:id="@+id/titulo_tab3"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:layout_margin="10dp"
+        			android:textAppearance="?android:attr/textAppearanceMedium"
+        			android:textStyle="bold"
+        			android:text="@string/configuracion_educativa" />  
+        
+    			<EditText
+        			android:id="@+id/editText_titulo_tab3"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:layout_margin="10dp"
+        			android:hint="@string/title"
+        			android:textAppearance="?android:attr/textAppearanceMedium"
+        			android:textStyle="bold"
+        			android:visibility="invisible"
+        			android:inputType="textMultiLine" />
+    		
+    			<ImageView
+        			android:id="@+id/imagen_tab3"
+        			android:contentDescription="@+id/imagen_tab3"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:layout_margin="10dp"
+        			android:onClick="getPhotoDialog"
+        			android:layout_below="@+id/titulo_tab3"
+        			android:src="@drawable/imagen" />
+       
+    			<TextView
+        			android:id="@+id/description_tab3"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:layout_below="@+id/imagen_tab3"
+        			android:layout_margin="10dp"
+        			android:hint="@string/description"
+        			android:textAppearance="?android:attr/textAppearanceSmall"/>
+    
+    			<EditText
+        			android:id="@+id/edit_description_tab3"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:layout_below="@+id/imagen_tab3"
+        			android:layout_alignBaseline="@+id/description_tab3"
+        			android:layout_margin="10dp"
+        			android:hint="@string/description"
+        			android:textAppearance="?android:attr/textAppearanceSmall"
+        			android:visibility="invisible"/>
+    
+    			</RelativeLayout>
+    			
+    		<View 
+    		    android:id="@+id/horizontalLine"
+       			android:background="@color/black_eduarea"
+  				android:layout_height="1dp"
+  				android:layout_width="match_parent"
+  				android:layout_below="@+id/header_layout_tab3"  
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp">
+        	</View>
+        	
+    		<TextView
+        		android:id="@+id/materia"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/horizontalLine"
+        		android:layout_margin="10dp"
+        		android:text="@string/materia"
+        		android:textStyle="bold"
+        		android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    		<TextView
+        		android:id="@+id/textView_materia"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_toRightOf="@+id/materia"
+        		android:layout_alignBaseline="@+id/materia"
+        		android:layout_marginLeft="100dp"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:hint="@string/materia" />
+    
+    		<EditText
+        		android:id="@+id/editText_materia"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_toRightOf="@+id/materia"
+        		android:layout_alignBaseline="@+id/materia"
+        		android:layout_marginLeft="100dp"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:hint="@string/materia"
+        		android:visibility="invisible" />    
+    		<Spinner
+    			android:id="@+id/materia_spinner"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/materia"
+				android:layout_below="@+id/materia"
+        		android:layout_marginLeft="100dp"
+        		android:visibility="gone"/>
+       
+    		<View 
+    		    android:id="@+id/horizontalLine2"
+       			android:background="@color/black_eduarea"
+  				android:layout_height="1dp"
+  				android:layout_width="match_parent"
+  				android:layout_below="@+id/materia_spinner"  
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp">
+        	</View>
+        	
+    		<TextView
+        		android:id="@+id/keywords"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/horizontalLine2"
+        		android:layout_margin="10dp"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:textStyle="bold"
+        		android:text="@string/keywords" />
+    
+    		<TextView
+        		android:id="@+id/textView_keywords"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/textView_materia"
+        		android:layout_alignLeft="@+id/textView_materia"
+        		android:layout_alignBaseline="@+id/keywords"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:hint="@string/keywords" />
+    		
+    		<View 
+    		    android:id="@+id/horizontalLine3"
+       			android:background="@color/black_eduarea"
+  				android:layout_height="1dp"
+  				android:layout_width="match_parent"
+  				android:layout_below="@+id/keywords"  
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp">
+        	</View>
+    
+    		<TextView
+        		android:id="@+id/audiencia"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentLeft="true"
+        		android:layout_below="@+id/horizontalLine3"
+        		android:layout_margin="10dp"
+        		android:textAppearance="?android:attr/textAppearanceMedium"
+        		android:textStyle="bold"
+        		android:text="@string/audiencia" />   
+    
+    		<TextView
+        		android:id="@+id/rango_edades"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/audiencia"
+        		android:layout_margin="10dp"
+        		android:text="@string/rango_edades"
+        		android:textStyle="bold"
+        		android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    		<TextView
+        		android:id="@+id/textView_rangoEdades"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignBaseline="@+id/rango_edades"
+        		android:layout_alignLeft="@+id/textView_keywords"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:hint="@string/rango_edades" />
+    
+    		<TextView
+        		android:id="@+id/nivel_educativo"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/rango_edades"
+        		android:layout_margin="10dp"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:textStyle="bold"
+        		android:text="@string/nivel_educativo" />
+
+    		<TextView
+        		android:id="@+id/textView_nivelEducativo"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignBaseline="@+id/nivel_educativo"
+        		android:layout_alignLeft="@+id/textView_rangoEdades"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:hint="@string/nivel_educativo" />
+    
+    		<Spinner
+    			android:id="@+id/education_level_spinner"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/nivel_educativo"
+				android:layout_below="@+id/nivel_educativo"
+        		android:layout_alignLeft="@+id/textView_nivelEducativo"
+        		android:visibility="gone"/>
+    		
+    		<View 
+    		    android:id="@+id/horizontalLine4"
+       			android:background="@color/black_eduarea"
+  				android:layout_height="1dp"
+  				android:layout_width="match_parent"
+  				android:layout_below="@+id/education_level_spinner"  
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp">
+        	</View>
+    
+    		<TextView
+        		android:id="@+id/lenguaje"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/horizontalLine4"
+        		android:layout_margin="10dp"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:textStyle="bold"
+        		android:text="@string/lenguaje" />
+
+    		<TextView
+        		android:id="@+id/textView_lenguaje"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignBaseline="@+id/lenguaje"
+        		android:layout_alignLeft="@+id/textView_nivelEducativo"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:hint="@string/lenguaje" />
+    
+    		<Spinner
+    			android:id="@+id/language_spinner"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/lenguaje"
+				android:layout_below="@+id/lenguaje"
+        		android:layout_alignLeft="@+id/textView_lenguaje"
+        		android:visibility="gone"/>
+    		
+    		<View 
+    		    android:id="@+id/horizontalLine5"
+       			android:background="@color/black_eduarea"
+  				android:layout_height="1dp"
+  				android:layout_width="match_parent"
+  				android:layout_below="@+id/language_spinner"  
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp">
+        	</View>
+    
+    		<TextView
+    		    android:id="@+id/address"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_margin="10dp"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:textStyle="bold"
+    		    android:layout_below="@+id/horizontalLine5"
+    		    android:text="@string/address"/>
+    		
+    		<TextView
+    		    android:id="@+id/address_textView"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+    		    android:layout_below="@+id/horizontalLine5"
+    		    android:layout_alignBaseline="@+id/address"
+    		    android:layout_alignLeft="@+id/textView_lenguaje"
+    		    android:layout_toRightOf="@+id/address"
+    		    android:hint="@string/address"/>
+    		
+    		<EditText
+    		    android:id="@+id/address_editText"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/horizontalLine5"
+    		    android:layout_alignBaseline="@+id/address"
+    		    android:layout_alignLeft="@+id/language_spinner"
+    		    android:layout_toRightOf="@+id/address"
+    		    android:text="@string/address"
+    		    android:hint="@string/address"
+    		    android:visibility="invisible"/>
+    		
+    		<Button
+        		android:id="@+id/ver_direccion"
+       			android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/address"
+        		android:layout_alignParentLeft="true"  
+        		android:layout_margin="10dp" 
+        		android:background="@drawable/orange_button_list_selector"    
+        		android:onClick="verDireccion"
+        		android:text="@string/ver_direccion" />
+    		
+    		<View 
+    		    android:id="@+id/horizontalLine6"
+       			android:background="@color/black_eduarea"
+  				android:layout_height="1dp"
+  				android:layout_width="match_parent"
+  				android:layout_below="@+id/ver_direccion"  
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp">
+        	</View>
+        	
+    		<TextView
+        		android:id="@+id/rango_fechas"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentLeft="true"
+        		android:layout_below="@+id/horizontalLine6"
+        		android:layout_margin="10dp"
+        		android:textAppearance="?android:attr/textAppearanceMedium"
+        		android:textStyle="bold"
+        		android:text="@string/rango_fechas" />
+
+    		<TextView
+        		android:id="@+id/fecha_inicio"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/rango_fechas"
+        		android:layout_margin="10dp"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:textStyle="bold"
+        		android:text="@string/fecha_inicio" />
+
+    		<TextView
+        		android:id="@+id/textView_fechaInicio"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignBaseline="@+id/fecha_inicio"
+        		android:layout_alignLeft="@+id/textView_lenguaje"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:hint="@string/fecha_inicio" />
+    
+    		<TextView
+        		android:id="@+id/fecha_fin"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/button_fechaInicio"
+        		android:layout_margin="10dp"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:textStyle="bold"
+        		android:text="@string/fecha_fin"/>
+
+    		<TextView
+        		android:id="@+id/textView_fechaFin"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content" 
+        		android:layout_alignBaseline="@+id/fecha_fin"
+        		android:layout_alignLeft="@+id/textView_fechaInicio"
+        		android:textAppearance="?android:attr/textAppearanceSmall"
+        		android:hint="@string/fecha_fin" />
+        	
+    		
+
+    		<EditText
+        		android:id="@+id/editText_keywords"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/textView_keywords"
+        		android:layout_alignBaseline="@+id/textView_keywords"
+        		android:ems="10"
+        		android:hint="@string/keywords"
+        		android:visibility="invisible"
+        		android:inputType="textMultiLine"/>
+
+   		 	<EditText
+        		android:id="@+id/editText_rangoEdades"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignBaseline="@+id/textView_rangoEdades"
+        		android:layout_alignLeft="@+id/textView_rangoEdades"
+        		android:ems="10"
+        		android:hint="@string/rango_edades"
+        		android:visibility="invisible"
+        		android:inputType="textMultiLine"/>
+    
+    		<EditText
+        		android:id="@+id/editText_nivelEducativo"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignBaseline="@+id/textView_nivelEducativo"
+        		android:layout_alignLeft="@+id/textView_nivelEducativo"
+        		android:ems="10"
+        		android:hint="@string/nivel_educativo"
+        		android:inputType="textMultiLine"
+        		android:visibility="invisible"/>
+    
+    		<EditText
+        		android:id="@+id/editText_lenguaje"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignBaseline="@+id/textView_lenguaje"
+        		android:layout_alignLeft="@+id/textView_lenguaje"
+       			android:ems="10"
+       		 	android:hint="@string/language"
+        		android:visibility="invisible"
+        		android:inputType="textMultiLine"/>
+
+    		<EditText
+        		android:id="@+id/editText_fechaInicio"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignBaseline="@+id/textView_fechaInicio"
+        		android:layout_alignLeft="@+id/textView_fechaInicio"
+        		android:hint="@string/fecha_inicio"
+        		android:visibility="invisible"
+        		android:inputType="textMultiLine"/>
+    
+    		<EditText
+        		android:id="@+id/editText_fechaFin"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignBaseline="@+id/textView_fechaFin"
+        		android:layout_alignLeft="@+id/textView_fechaFin"
+        		android:hint="@string/fecha_fin"
+        		android:visibility="invisible"
+        		android:inputType="textMultiLine"/>    
+        
+    		<Button
+    		    android:id="@+id/button_fechaInicio"
+    		    android:layout_width="match_parent"
+    		    android:layout_height="wrap_content"
+    		    android:layout_margin="10dp" 
+    		    android:background="@drawable/orange_button_list_selector"
+    		    android:layout_below="@+id/fecha_inicio"
+    		    android:visibility="gone"
+    		    android:onClick="showStartDatePickerDialog"
+    		    android:text="@string/select_start_date"/>
+    		
+    		<Button
+    		    android:id="@+id/button_fechaFin"
+    		    android:layout_width="match_parent"
+    		    android:layout_height="wrap_content"
+    		    android:layout_margin="10dp" 
+    		    android:background="@drawable/orange_button_list_selector"
+    		    android:layout_below="@+id/fecha_fin"
+    		    android:visibility="gone"
+    		    android:onClick="showEndDatePickerDialog"
+    		    android:text="@string/select_end_date"/>
+    		
+    		<View 
+    		    android:id="@+id/horizontalLine7"
+       			android:background="@color/black_eduarea"
+  				android:layout_height="1dp"
+  				android:layout_width="match_parent"
+  				android:layout_below="@+id/button_fechaFin"  
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp">
+        	</View>
+        	
+    	<Button
+	    	android:id="@+id/copy_educational_setting_tab3"
+	    	android:layout_width="match_parent"
+	    	android:background="@drawable/orange_button_list_selector"
+	    	android:layout_height="wrap_content"
+	    	android:layout_below="@+id/horizontalLine7"
+	    	android:layout_centerHorizontal="true"
+	    	android:layout_margin="10dp"
+	   		android:onClick="copy_educational_setting"
+	    	android:textAppearance="?android:attr/textAppearanceMedium"
+	    	android:text="@string/copy_educational_setting"/>
+    
+    	<Button
+	    	android:id="@+id/create_educational_setting_tab3"
+	    	android:layout_width="match_parent"
+	    	android:background="@drawable/orange_button_list_selector"
+	    	android:layout_height="wrap_content"
+	    	android:layout_below="@+id/copy_educational_setting_tab3"
+	    	android:layout_centerHorizontal="true"
+	    	android:layout_margin="10dp"
+	    	android:onClick="create_educational_setting"
+	    	android:textAppearance="?android:attr/textAppearanceMedium"
+	    	android:text="@string/create_educational_setting"
+	    	android:paddingBottom="10dp"/>
+        	       
+    	<View 
+    		android:id="@+id/horizontalLine8"
+       		android:background="@null"
+  			android:layout_height="1dp"
+  			android:layout_width="match_parent"
+  			android:layout_below="@+id/create_educational_setting_tab3"  
+        	android:layout_marginTop="1dp"
+        	android:layout_marginBottom="1dp">
+        </View>
+        
+		</RelativeLayout>
+		
+	</ScrollView>
+
+</RelativeLayout>
+

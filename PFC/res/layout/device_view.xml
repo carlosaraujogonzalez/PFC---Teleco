@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@drawable/fondo_guias" >
+  
+    
+ <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/white_box" >
+   
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" >
+        
+    <TextView
+        android:id="@+id/titulo_vistadisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/titulo"
+        android:hint="@string/title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+    
+    <ImageView
+        android:id="@+id/imagen_vistadisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/titulo_vistadisp"
+        android:contentDescription="@+id/imagen_vistadisp"
+        android:src="@drawable/imagen" />
+
+     <TextView
+        android:id="@+id/descripcion_vistadisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/imagen_vistadisp"
+        android:text="@string/descripcion"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:hint="@string/description"/>
+        
+    </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

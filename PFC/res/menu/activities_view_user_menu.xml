@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="area.guias.pfc.VerAplicaciones" >
+    
+    <item 
+        android:id="@+id/activities_view_user_revert"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/atras">
+    </item>
+    
+    <item android:id="@+id/system_activities"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_select_all"
+        android:title="@string/system_activities">
+    </item>
+    
+    <item
+        android:id="@+id/search_user_activities"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search_activities"/>
+    
+    <item android:id="@+id/delete_activities"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="@string/delete_activities">
+    </item>
+
+
+</menu>

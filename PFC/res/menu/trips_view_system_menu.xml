@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="area.guias.pfc.ToolsView" >
+    
+    <item 
+        android:id="@+id/trips_view_system_revert"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/atras">
+    </item>
+    
+    <item android:id="@+id/user_trips"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_user"
+        android:title="@string/user_trips">
+    </item>
+
+    <item
+        android:id="@+id/search_system_trips"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search_trips"/>
+    
+    <item android:id="@+id/add_trips"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/add_trips">
+    </item>
+    
+</menu>

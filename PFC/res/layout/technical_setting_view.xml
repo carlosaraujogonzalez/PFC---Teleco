@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/technical_setting_view_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    tools:context=".TechnicalSettingView" >
+  
+   
+   <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/white_box">
+        
+   		<RelativeLayout
+       		android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+       		android:orientation="vertical" >
+   
+   		     <ImageView
+        		android:id="@+id/image"       		
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"       		
+        		android:layout_below="@+id/title"
+        		android:layout_margin="10dp"
+        		android:onClick="getPhotoDialog"
+        		android:contentDescription="@string/imagen"
+        		android:src="@drawable/imagen" />
+   		     
+   		    <TextView
+        		android:id="@+id/title"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="@string/titulo"
+        		android:layout_margin="10dp"
+        		android:textAppearance="?android:attr/textAppearanceMedium"
+        		android:textStyle="bold" />
+   		    
+   		   
+   		    
+   		    <EditText
+	    		android:id="@+id/edit_title"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_margin="10dp"
+	    		android:inputType="textMultiLine"
+	    		android:textAppearance="?android:attr/textAppearanceMedium"
+	    		android:textStyle="bold" 	    		
+	    		android:visibility="invisible">
+			</EditText>
+         
+    		<TextView
+        		android:id="@+id/description"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_margin="10dp"
+        		android:layout_below = "@+id/image"
+        		android:text="@string/descripcion"
+        		android:textAppearance="?android:attr/textAppearanceSmall" />
+
+			<EditText
+        		android:id="@+id/edit_description"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_margin="10dp"
+        		android:layout_below="@+id/image"
+	    		android:inputType="textMultiLine"
+	    		android:visibility="invisible"
+	    		android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+    		<Button
+	    		android:id="@+id/ver_dispositivos"
+	    		android:background="@drawable/orange_button_list_selector"
+	    		android:layout_width="match_parent"
+	    		android:layout_height="wrap_content"
+	    		android:layout_below="@+id/description"
+	    		android:layout_centerHorizontal="true"
+	   		 	android:layout_margin="10dp"
+	    		android:onClick="ver_dispositivos"
+	    		android:textAppearance="?android:attr/textAppearanceMedium"
+	    		android:text="@string/ver_dispositivos"/>
+    
+    		<Button
+	    		android:id="@+id/ver_aplicaciones"
+	    		android:layout_width="match_parent"
+	    		android:background="@drawable/orange_button_list_selector"
+	    		android:layout_height="wrap_content"
+	    		android:layout_below="@+id/ver_dispositivos"
+	    		android:layout_centerHorizontal="true"
+	    		android:layout_margin="10dp"
+	    		android:onClick="ver_aplicaciones"
+	    		android:textAppearance="?android:attr/textAppearanceMedium"
+	    		android:text="@string/ver_aplicaciones"/>
+   
+    		<View 
+    			android:id="@+id/margin"
+       			android:background="@null"
+  				android:layout_height="1dp"
+  				android:layout_width="match_parent"
+  				android:layout_below="@+id/ver_aplicaciones"  
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp">
+        	</View>
+    
+     	</RelativeLayout>
+     
+     </ScrollView>
+
+</RelativeLayout>

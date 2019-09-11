@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".SignInActivity" >
+
+    <ImageView 
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/icono"
+        android:contentDescription="@string/image"/>
+            
+    <ScrollView
+        android:id="@+id/scrollView_tab1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView" 
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/white_box">
+    
+        <RelativeLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical"
+    		android:layout_gravity="center_vertical"
+    		android:background="@null">
+           
+    		<TextView
+        		android:id="@+id/introEmail"
+        		android:layout_width="match_parent"
+        		android:layout_height="match_parent"
+        		android:gravity="center"
+        		android:layout_marginTop="10dp"
+        		android:textAppearance="?android:attr/textAppearanceLarge"
+        		android:text="@string/email" />
+    
+    		<EditText
+        		android:id="@+id/email"
+        		android:inputType="textEmailAddress"
+        		android:layout_below="@+id/introEmail" 
+        		android:layout_width="match_parent"
+        		android:layout_height="match_parent"
+        		android:textAppearance="?android:attr/textAppearanceMedium"
+        		android:gravity="center"
+        		android:layout_marginRight="5dp"
+        		android:layout_marginLeft="5dp"
+        		android:ems="10" >
+    		</EditText>
+    
+    		<TextView
+        		android:id="@+id/introPassword"
+        		android:layout_below="@+id/email" 
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_marginTop="50dp"
+        		android:gravity="center"
+        		android:textAppearance="?android:attr/textAppearanceLarge"
+        		android:text="@string/password" />
+
+    		<EditText
+        		android:id="@+id/password"
+        		android:layout_below="@+id/introPassword" 
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:textAppearance="?android:attr/textAppearanceMedium"
+        		android:inputType="textPassword"
+        		android:gravity="center"
+        		android:layout_margin="5dp" >
+    		</EditText>
+
+    		<TextView
+        		android:id="@+id/introRepeatPassword"
+        		android:layout_below="@+id/password" 
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_marginTop="50dp"
+        		android:gravity="center"
+        		android:textAppearance="?android:attr/textAppearanceLarge"
+        		android:text="@string/repeat_password" />
+
+    		<EditText
+        		android:id="@+id/repeatPassword"
+        		android:layout_below="@+id/introRepeatPassword" 
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentBottom="true"
+        		android:textAppearance="?android:attr/textAppearanceMedium"
+        		android:inputType="textPassword"
+        		android:gravity="center"
+        		android:layout_margin="5dp" >
+    		</EditText>
+    		
+    		</RelativeLayout>
+
+     </ScrollView>
+     
+    <Button
+        android:id="@+id/enviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/blue_button_list_selector"
+        android:gravity="center"
+        android:text="@string/enviar"
+        android:textColor="@color/white_eduarea"/>
+    
+	</RelativeLayout>

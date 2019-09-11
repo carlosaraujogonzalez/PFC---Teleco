@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools" 
+     android:layout_width="match_parent" 
+     android:layout_height="match_parent" 
+     android:baselineAligned="false"
+     android:orientation="vertical"
+     tools:context=".ToolsView">
+    
+    <LinearLayout 
+        android:id="@+id/linearLayout_search_tools"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:background="@drawable/comment_box" 
+    	android:visibility="gone">
+        
+        <EditText  
+        	android:id="@+id/editText_tools_view"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:hint="@string/search_tools"
+        	android:layout_weight="0.7"
+        	android:textColorHint="@color/white_eduarea"
+        	android:textColor="@color/white_eduarea"
+        	android:textCursorDrawable="@drawable/white_cursor"
+        	>
+        </EditText>
+        
+        <ImageView
+            android:id="@+id/imageView_search_tools_view"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="0.2"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="@string/imagen">
+        </ImageView>
+        
+        <ImageView
+            android:id="@+id/imageView_close_search_tools_view"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="0.1"
+            android:src="@android:drawable/ic_delete"
+            android:contentDescription="@string/imagen">
+        </ImageView>
+      
+	</LinearLayout>
+	
+     <fragment
+          android:id="@+id/toolsFragment" 
+          android:layout_width="match_parent" 
+          android:layout_height="0dp" 
+          android:layout_weight="1"
+          class="area.guias.pfc.ToolsFragment"/>
+    
+</LinearLayout>
+

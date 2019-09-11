@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="area.guias.pfc.Ver_Guias" >
+    
+    <item
+        android:id="@+id/menu_verguias"
+        app:showAsAction="never"
+        android:title="@string/ver_guias"/>
+ 
+    <item
+        android:id="@+id/menu_vermisguias"
+        app:showAsAction="never"
+        android:title="@string/ver_mis_guias"/>
+ 
+    <item
+        android:id="@+id/menu_revert"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/atras"/>
+    
+    <item
+        android:id="@+id/refresh_view_menu"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/refresh"/>
+
+    <item
+        android:id="@+id/menu_nueva_guia"
+        app:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/nueva_guia"/>
+    
+    <item
+        android:id="@+id/search_guides_view_menu"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search_guides"/>
+    
+</menu>

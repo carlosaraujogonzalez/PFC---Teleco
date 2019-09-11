@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+    <string name="action_settings">Settings</string>
+    <string name="action_view_mode">Modo Vista</string>
+    <string name="action_edition_mode">Modo Edición</string>
+    <string name="action_documentation_mode">Modo Documentación</string>   
+    <string name="action_logout">Salir</string>
+    <string name="activity">Actividad</string>
+    <string name="ACTIVITY">ACTIVIDAD</string>
+    <string name="activity_sequence_section">Sección de secuencia de actividades</string>
+    <string name="action_refresh">Actualizar</string>
+    <string name="add">Añadir</string>
+    <string name="add_image">Añadir imagen</string>
+    <string name="add_video">Añadir vídeo</string>
+    <string name="add_activities">Añadir actividades</string>
+    <string name="add_contents">Añadir contenidos</string>
+    <string name="add_persons">Añadir personas</string>
+    <string name="add_people">Añadir colaboradores</string>
+    <string name="add_tools">Añadir herramientas</string>
+    <string name="add_trips">Añadir salidas</string>
+    <string name="address">Dirección</string>
+    <string name="album_name">EDU-AREA álbum</string>
+    <string name="all">Todo</string>
+    <string name="anadir_aplicaciones">Añadir aplicaciones</string>
+    <string name="anadir_dispositivos">Añadir dispositivos</string>
+    <string name="app_name">PFC</string>
+    <string name="aplicaciones">APLICACIONES</string>
+    <string name="aporta_o_teu_gran">Aporta o teu gran!</string>
+    <string name="atras">Atrás</string>
+    <string name="audiencia">Audiencia</string>   
+    
+    <string name="borrar_aplicaciones">Borrar aplicaciones</string>
+    <string name="borrar_dispositivos">Borrar dispositivos</string>
+         
+    <string name="cancel">Cancelar</string>
+    <string name="camera">Cámara</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="close_navigation_drawer">Cerrar menú lateral</string>
+    <string name="configuracion_educativa">Configuración educativa</string>
+    <string name="comment">Comentar</string>
+    <string name="commentary">Comentario</string>
+    <string name="comentar">Comentar</string>
+    <string name="comment_no_saved">No se ha podido guardar el comentario.</string>
+    <string name="compartir">Compartir</string>
+    <string name="content_sequence_section">Sección de secuencia de contenidos</string>
+    <string name="contextoeducativo">CONTEXTO EDUCATIVO</string>
+    <string name="contextotecnico">CONTEXTO TÉCNICO</string>
+    <string name="copiar">Copiar</string>
+    <string name="copy_educational_setting">Copiar contexto educativo</string>
+    <string name="copy_educational_setting_to_guide">Copiar contexto educativo a la guía</string>
+    <string name="copy_technical_setting">Copiar contexto técnico</string>
+    <string name="copy_technical_setting_to_guide">Copiar contexto técnico a la guía</string>
+    <string name="copy_to_guide">Copiar a la guía</string>
+    <string name="create_educational_setting">Crear contexto educativo</string>  
+    <string name="create_technical_setting">Crear contexto técnico</string>   
+    
+	<string name="date">fecha</string>
+    <string name="delete_activities">Borrar actividades</string>
+    <string name="descripcion">Descripción\n</string>
+    <string name="description">Descripción</string>
+    <string name="dispositivos">DISPOSITIVOS</string>
+    
+    <string name="editar">Editar</string>
+    <string name="edit">Editar</string>
+    <string name="edit_mode">Modo edición</string>
+    <string name="edu_area">E D U - A R E A</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="email">E-mail</string>
+    <string name="english">Inglés</string>
+    <string name="enviar">Enviar</string>
+    <string name="error">Error</string>
+    <string name="espanol">Español</string>
+    <string name="evidences">Evidencias</string>
+    <string name="evidence_saved">Evidencia guardada</string>
+    <string name="evidence_no_saved">Evidencia no guardada</string>
+    
+    <string name="fecha_inicio">Fecha de inicio</string>
+    <string name="fecha_fin">Fecha de fin</string>
+    <string name="file_explorer_not_found">Explorador de archivos no encontrado</string>
+    
+    <string name="galician">Gallego</string>
+    <string name="gallery">Galería</string>
+    <string name="guardar">Guardar</string>
+    <string name="guia">GUÍA</string>
+    <string name="guias">GUÍAS</string>
+    
+    <string name="hello_world">Hello world!</string>
+    <string name="hide_keyboard">Esconder teclado</string>
+    
+    <string name="imagen">Imagen</string>
+    <string name="image">Imagen</string>
+        
+    <string name="keywords">Palabras clave</string>
+    
+    <string name="language">Idioma</string>
+    <string name="lenguaje">Lenguaje</string>
+    <string name="linea">_________________________________</string>
+    <string name="loading">Cargando&#8230;</string>
+    <string name="loading_comments">Cargando comentarios</string>
+    <string name="loading_experiences">Cargando Experiencias</string>
+    <string name="log_in">Iniciar sesión</string>
+    
+    <string name="materia">Materia</string>
+    <string name="message">Mensaje</string>
+    <string name="myEmail">charlyargon@hotmail.com</string>
+    <string name="myPassword">eduarea</string>
+    
+    <string name="nivel_educativo">Nivel educativo</string>
+    <string name="new_reflection">Nueva reflexión</string>
+    <string name="no_comments">No hay comentarios</string>
+    <string name="no_hay_aplicaciones">No hay aplicaciones</string>
+    <string name="no_hay_dispositivos">No hay dispositivos</string>
+    <string name="no_hay_guias">No hay guías</string>
+    <string name="nueva_guia">Nueva guía</string>
+    
+    <string name="ok">OK</string>
+    <string name="open_navigation_drawer">Abrir menú lateral</string>
+        
+    <string name="padlock">Padlock</string>
+    <string name="password">Contraseña</string>
+    <string name="palabras_clave">Palabras clave:\n</string>
+    <string name="preparing_data">Preparando datos</string>
+    <string name="privat">Privado</string>
+    <string name="private_public">privado/público</string>
+    <string name="publik">Público</string>
+    
+    <string name="rango_edades">Rango de edades</string>
+    <string name="rango_fechas">Rango de fechas</string>
+    <string name="reflections">Reflexiones</string>
+    <string name="reflexions">Reflexiones</string>
+    <string name="reflection_saved">Reflexión guardada</string>
+    <string name="reflection_no_saved">Reflexión no guardada</string>
+    <string name="refresh">Actualizar</string>
+    <string name="remove">Eliminar</string>
+    <string name="remove_contents">Eliminar contenidos</string>
+    <string name="remove_persons">Eliminar personas</string>
+    <string name="remove_tools">Eliminar herramientas</string>
+    <string name="remove_trips">Eliminar salidas</string>
+    <string name="repeat_password">Repetir contraseña</string>
+    
+    <string name="save">Guardar</string>
+    <string name="save_activity">Guardar actividad</string>
+    <string name="search_activities">Buscar actividades</string>
+    <string name="search_applications">Buscar aplicaciones</string>
+    <string name="search_contents">Buscar contenidos</string>
+    <string name="search_devices">Buscar dispositivos</string>
+    <string name="search_educational_settings">Buscar contextos educativos</string>
+    <string name="search_guides">Buscar guías</string>
+    <string name="search_persons">Buscar personas</string>
+    <string name="search_technicalSettings">Buscar contextos técnicos</string>
+    <string name="search_technical_settings">Buscar contextos técnicos</string>
+    <string name="search_tools">Buscar herramientas</string>
+    <string name="search_trips">Buscar salidas</string>
+    <string name="secuenciasdeactividad">SECUENCIAS DE ACTIVIDAD</string>
+    <string name="see_activities">Ver actividades</string>
+    <string name="seleccionada">Seleccionada</string>
+    <string name="seleccionar_idioma">Seleccionar idioma</string>
+    <string name="select_start_date">Seleccionar fecha inicial</string>
+    <string name="select_end_date">Seleccionar fecha final</string>
+    <string name="server_address">193.146.210.92:3000</string>
+    <string name="share">Compartir</string>
+    <string name="show_keyboard">Mostar teclado</string>
+    <string name="show_hide_keyboard">Mostrar/Ocultar el teclado</string>
+    <string name="sign_in">Registrarse</string>
+    <string name="spanish">Español</string>
+    <string name="starting">Iniciando</string>
+    <string name="system_activities">Actividades del sistema</string>
+    <string name="system_applications">Aplicaciones del sistema</string>
+    <string name="system_contents">Contenidos del sistema</string>
+    <string name="system_devices">Dispositivos del sistema</string>
+    <string name="system_persons">Personas del sistema</string>
+    <string name="system_tools">Herramientas del sistema</string>
+    <string name="system_trips">Salidas del sistema</string>
+    
+    <string name="there_are_no_activities">No hay actividades</string>
+    <string name="there_are_no_contents">No hay contenidos</string>
+    <string name="there_are_no_persons">No hay personas</string>
+    <string name="there_are_no_educationalSettings">No hay contextos educativos</string>
+    <string name="there_are_no_technicalSettings">No hay contextos técnicos</string>
+    <string name="there_are_no_tools">No hay herramientas</string>
+    <string name="there_are_no_trips">No hay eventos</string>
+    <string name="titulo">Título</string>
+    <string name="title">Título</string>   
+    <string name="tituloGuia">\n\n                           Título de guía</string>
+    <string name="title_section1">Guia</string>
+    <string name="title_section2">Contexto técnico</string>
+    <string name="title_section3">Contexto educativo</string>
+    <string name="title_section4">Secuencias de actividad</string>
+    
+    
+    <string name="user">Usuario</string>
+    <string name="user_activities">Actividades de usuario</string>
+    <string name="user_applications">Aplicaciones de usuario</string>
+    <string name="user_contents">Contenidos de usuario</string>
+    <string name="user_devices">Dispositivos de usuario</string>
+    <string name="user_name">Nombre de usuario</string>
+    <string name="user_persons">Personas de usuario</string>
+    <string name="user_tools">Herramientas de usuario</string>
+    <string name="user_trips">Salidas de usuario</string>
+    
+    <string name="ver_aplicaciones">Ver aplicaciones</string>
+    <string name="ver_direccion">Ver dirección</string>
+    <string name="ver_dispositivos">Ver dispositivos</string>
+    <string name="ver_guias">Todas las guías</string>
+    <string name="ver_mis_guias">Mis guías</string>
+    <string name="view_mode">Modo vista</string>
+    
+    <string name="waiting_server_response">Esperando respuesta del servidor</string>
+    <string name="write_here">Escribe aquí</string>
+    
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    
+    <!--lista de titulos de navegaciÃ³n -->
+    <string-array name="nav_options">
+        <item>Recursos</item>
+        <item>Actividades</item>
+        <item>Secuencias</item>
+        <item>Guías</item>
+        <item>Experiencias</item>
+        <item>Tableros</item>
+    </string-array>
+    <!-- lista de iconos de navegacion -->
+    <array name="navigation_iconos">
+        <item>@drawable/ic_action_user</item>
+        <item>@drawable/ic_action_star</item>
+        <item>@drawable/ic_drawer</item>
+		<item>@drawable/guides</item>
+		<item>@drawable/ic_action_place</item>
+		<item>@drawable/ic_action_labels</item>
+    </array>
+    
+       
+</resources>

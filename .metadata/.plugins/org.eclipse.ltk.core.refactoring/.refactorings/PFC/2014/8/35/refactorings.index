@@ -1,0 +1,96 @@
+1408966682997	Rename type 'BorrarActividades'
+1409050535179	Rename method 'reload'
+1409137754585	Rename local variable 'BaseUrlPage'
+1409226442027	Copy file
+1409226927059	Rename field 'toolsType'
+1409227242453	Copy file
+1409227481583	Copy file
+1409227983640	Rename type 'ToolsAdapter'
+1409228024996	Rename field 'toolsStore'
+1409228035771	Rename field 'toolsType'
+1409228102313	Rename method 'get_tools'
+1409228128880	Rename method 'addTools'
+1409228152177	Rename type 'SelectedTools'
+1409228170387	Rename local variable 'selectedTools'
+1409230138586	Rename method 'getTools'
+1409230152975	Rename type 'GetTools'
+1409230167398	Rename method 'downloadToolImages'
+1409230178635	Rename type 'DownloadToolImages'
+1409230273955	Rename method 'numSelectedTools'
+1409230283946	Rename local variable 'selectedTools'
+1409230345816	Rename method 'numToolsChecked'
+1409230664642	Rename method 'toolsSearch'
+1409230673652	Rename type 'ToolsSearch'
+1409230697392	Rename method 'updateToolsList'
+1409232368893	Rename local variable 'url_devices'
+1409232868282	Rename field 'devicesList'
+1409233069819	Rename local variable 'tool'
+1409233212328	Rename field 'devices_number'
+1409233298463	Rename type 'RemoveTools'
+1409233478905	Rename local variable 'urlDevices'
+1409233708038	Rename method 'removeTools'
+1409233740932	Copy file
+1409235380004	Delete element
+1409235393439	Copy file
+1409235734284	Delete element
+1409235737085	Delete element
+1409235770136	Delete element
+1409235773829	Delete element
+1409235787512	Copy compilation unit
+1409235797576	Copy compilation unit
+1409235808479	Copy compilation unit
+1409235817219	Copy compilation unit
+1409235889681	Rename field 'tripsType'
+1409235949610	Copy file
+1409236069117	Copy file
+1409236238087	Copy file
+1409236528852	Rename type 'SelectedTrips'
+1409237094137	Rename type 'TripsSearch'
+1409237190575	Rename type 'TripsAdapter'
+1409237223138	Rename local variable 'trips'
+1409314169102	Rename local variable 'selectedTrips'
+1409314218852	Rename type 'AddTrips'
+1409314277606	Rename method 'downloadTripImages'
+1409314289041	Rename type 'DownloadTripImages'
+1409314537849	Rename method 'getTrips'
+1409314548634	Rename type 'GetTrips'
+1409314577192	Rename local variable 'numTripsToDelete'
+1409314607105	Rename local variable 'selectedTrips'
+1409314719490	Rename method 'get_trips'
+1409314729219	Rename local variable 'tools_type'
+1409314929656	Rename method 'updateTripsList'
+1409314952038	Rename field 'selectedTrips'
+1409314962313	Rename local variable 'selectedTrips'
+1409315689143	Rename local variable 'url_trips'
+1409316156064	Rename local variable 'urlEvents'
+1409319851169	Rename field 'tripsType'
+1409320059550	Rename type 'People'
+1409320071848	Rename type 'PeoplesView'
+1409320091162	Rename type 'PeopleStore'
+1409320102882	Rename type 'PeoplesFragment'
+1409320112372	Rename type 'PeopleArray'
+1409320147134	Rename resource 'peoples_view.xml'
+1409320169272	Copy file
+1409320188072	Rename field 'peoplesType'
+1409320234919	Copy file
+1409320260922	Copy file
+1409320755828	Rename type 'SelectedTrips'
+1409320763696	Rename method 'numSelectedTrips'
+1409320775352	Rename local variable 'selectedTrips'
+1409320788651	Rename field 'tripsStore'
+1409320800101	Rename method 'numTripsChecked'
+1409321028355	Rename type 'TripsAdapter'
+1409321067034	Rename local variable 'trips'
+1409321499516	Rename field 'tripsType'
+1409321523639	Rename method 'addTrips'
+1409321753597	Rename method 'getTrips'
+1409321767193	Rename type 'GetTrips'
+1409321815673	Rename local variable 'tools_type'
+1409321867299	Rename local variable 'tripsType'
+1409321880367	Rename method 'removeTrips'
+1409321889580	Rename local variable 'selectedTrips'
+1409321960843	Rename type 'RemoveTrips'
+1409321980340	Rename method 'tripsSearch'
+1409322025776	Rename type 'AddTrips'
+1409322177085	Rename field 'selectedTrips'
+1409322184914	Rename local variable 'selectedTrips'
