@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;white_box.xml&apos; to &apos;white_box.xml&apos;&#x0D;&#x0A;- Original project: &apos;PFC&apos;&#x0D;&#x0A;- Destination element: &apos;white_box.xml&apos;&#x0D;&#x0A;- Original element: &apos;white_box.xml&apos;" description="Copy file" element1="res/drawable/white_box.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1406899601738" target="/PFC/res/drawable/white_box.xml" units="0" version="1.0"/>
-</session>
